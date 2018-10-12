@@ -8,6 +8,14 @@ def render_main():
 
 @app.route("/response")
 def render_response():
+    color = request.args['color']
+    #The request object stores information about the request sent to the server.
+    #args is a MuiltDict (like a dictionary but can have nultiple values for the same key.)
+    #The information in args is visible in the url for the page being requested. ex. .../response?color=orange
+    if color == 'pink':
+            reply = "Thats my favorite color, too!"
+        else:
+            reply = "My favorite color is pink"       
     return render_template('response.html')
     
     
