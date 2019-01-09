@@ -14,7 +14,7 @@ def render_response():
     #The information in args is visible in the url for the page being requested. ex. .../response?color=orange
     if color == 'pink':
             reply = "Thats my favorite color, too!"
-        else:
+    else:
             reply = "My favorite color is pink"       
     return render_template('response.html', response=reply)
     
